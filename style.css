@@ -877,4 +877,268 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
- 
+ /* =================================
+   KHE ART CREATIONS — DARK THEME
+================================= */
+
+:root {
+  --ink: #f4f0e7;
+  --paper: #171715;
+  --orange: #ff633d;
+  --purple: #8065b9;
+  --yellow: #f4c84a;
+  --green: #a9b89b;
+  --white: #fffdf7;
+}
+
+/* DARK BACKGROUND */
+html {
+  background: #171715;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #171715;
+  color: #f4f0e7;
+  overflow-x: hidden;
+}
+
+.announcement,
+.header,
+.footer {
+  background: #111110;
+  color: #f4f0e7;
+}
+
+.header {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.nav a,
+.logo,
+.footer a {
+  color: #f4f0e7;
+}
+
+.statement,
+.about,
+.services,
+.journal,
+.contact {
+  background: #171715;
+  color: #f4f0e7;
+}
+
+.art-card,
+.service-card,
+.journal-card {
+  background: #22221f;
+  color: #f4f0e7;
+  border-color: rgba(255,255,255,.14);
+}
+
+.art-details,
+.gallery-footnote,
+.about p,
+.service-card p,
+.journal-card p {
+  color: #c5c0b6;
+}
+
+.art-placeholder,
+.about-art-placeholder {
+  background: #292923;
+}
+
+.section-heading,
+.hero-heading {
+  color: #f4f0e7;
+}
+
+input,
+textarea {
+  background: #22221f;
+  color: #fffdf7;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 16px 5%;
+    position: relative;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 24px 5%;
+    background: #111110;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 22px;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #f4f0e7;
+    background: transparent;
+    border: 0;
+  }
+
+  .hero {
+    padding: 65px 6% 45px;
+    min-height: auto;
+  }
+
+  .hero-heading {
+    font-size: clamp(3rem, 13vw, 6rem);
+    line-height: .98;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-topline,
+  .hero-bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero-artwork {
+    width: 100%;
+    max-width: 100%;
+    margin: 35px auto;
+  }
+
+  .hero-art-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-side-note {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .marquee {
+    overflow: hidden;
+  }
+
+  .statement,
+  .gallery,
+  .about,
+  .services,
+  .journal,
+  .contact {
+    padding: 65px 6%;
+  }
+
+  .section-heading {
+    font-size: clamp(2.2rem, 9vw, 4rem);
+    line-height: 1.05;
+  }
+
+  .gallery-grid,
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .art-card,
+  .service-card,
+  .journal-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .art-image {
+    width: 100%;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-art-placeholder {
+    width: 100%;
+  }
+
+  .journal {
+    display: block;
+  }
+
+  .journal-card {
+    margin-bottom: 22px;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .contact-button {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .footer {
+    padding: 35px 6%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-heading {
+    font-size: clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .hero-sticker {
+    transform: scale(.8);
+  }
+
+  .section-heading {
+    font-size: 2.3rem;
+  }
+
+  .gallery,
+  .about,
+  .services,
+  .journal,
+  .contact {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
